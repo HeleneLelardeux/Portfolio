@@ -1,0 +1,433 @@
+/* Style CSS */
+/* Importation de la police */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style global */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #3a2e2a;
+	background-color: #fefefe; /* Blanc cassé */
+    color: #0b3d3d; /* Vert forêt */
+    line-height: 1.6;
+}
+
+img:hover {
+    filter: brightness(0.9);
+    transform: scale(1.05);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+/* Header */
+header {
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+	background-color: #0b3d3d;
+    color: #eaf4f4;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+header h1 {
+    font-size: 2.5em;
+    color: #eaf4f4; /*Beige*/
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+
+nav ul li a {
+    color: #eaf4f4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Conteneur principal */
+.container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à une nouvelle ligne si nécessaire */
+	justify-content: center; /* Centre les boîtes horizontalement */
+    align-items: stretch; /* Centre les boîtes verticalement (utile si la hauteur du conteneur est définie) */
+    min-height: 60vh; /* (optionnel) Assure que le conteneur occupe toute la hauteur de l'écran */
+}
+
+/* Sections */
+section {
+    padding: 20px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-bottom: 40px;
+	padding-top: 20px; 
+    padding-bottom:20px;
+}
+
+/* Section À propos */
+.about {
+    background-color: #eaf4f4 ;
+    padding: 40px;
+	margin: 40px auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    text-align: right;
+	margin-bottom: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-text {
+    flex: 2;
+	color: #0b3d3d;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: #0b3d3d; /* Couleur du titre */
+    margin-bottom: 20px; /* Plus d'espace sous le titre */
+    font-weight: 700; /* Mettre le titre en gras */
+}
+
+.about-text p {
+    font-size: 1.1em; /* Augmenter la taille du texte */
+    margin-bottom: 15px; /* Espacement entre les paragraphes */
+    line-height: 1.7; /* Hauteur de ligne pour une meilleure lisibilité */
+    color: #3a2e2a; /* Couleur de texte plus douce pour les paragraphes */
+}
+
+.about-block h2 {
+    color: #0b3d3d;
+    margin-bottom: 20px;
+}
+
+.about p {
+    margin-bottom: 10px;
+}
+
+/* Section Centres d'intérêt et Compétences */
+.interests {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+	padding: 10px;
+}
+
+.interests-block img {
+    height: 24px;
+    width: auto;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.interests-block{
+	flex: 1; 
+    min-width: 300px; 
+    background-color: #eaf4f4 ;
+   padding: 25px; 
+    margin: 10px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.skills-block {
+    flex: 1; 
+    min-width: 800px; 
+    background-color: #eaf4f4 ;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.interests-block h2,
+.skills-block h2 {
+    color: #0b3d3d;
+    margin-bottom: 20px;
+}
+
+.interests ul {
+    list-style-type: none;
+	padding-left: 10px;
+}
+
+.interests li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+	gap: 5px;
+}
+
+.interests li img {
+    margin: 0;
+	height: 30px;
+}
+
+
+/* Compétences spécifiques */
+.skills-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.skill {
+    background-color: #eaf4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.skill h3 {
+    color: #3a2e2a;
+    margin-bottom: 10px;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.logos img {
+    width: 52px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.1);
+}
+
+/* Section Projets */
+.projects {
+    background-color: #eaf4f4 ;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.projects h2 {
+    color: #0b3d3d;
+    margin-bottom: 20px;
+}
+
+/* === Section Contact === */
+.contact {
+    margin-top: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #eaf4f4 , #eaf4f4 );
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 40px;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #0b3d3d;
+    margin-bottom: 40px;
+}
+
+
+.contact p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #3a2e2a;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+	width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+form .messageGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form label {
+    font-size: 1em;
+    color: #0b3d3d;
+    font-weight: bold;
+}
+
+form input, 
+form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #9dac5e;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, 
+form textarea:focus {
+    border-color: #0b3d3d;
+    box-shadow: 0 0 8px rgba(11, 61, 61, 0.5);
+    outline: none;
+}
+
+form textarea {
+    resize: none;
+    min-height: 150px;
+}
+
+/* Bouton Envoyer */
+form button {
+    padding: 15px;
+    background-color: #0b3d3d;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #3a2e2a;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Footer */
+footer {
+    background-color: #0b3d3d;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    color: #eaf4f4;
+    border-top: 2px solid #eaf4f4;
+}
+
+
+footer a {
+    color: #eaf4f4;
+}
+
+/* Accessibiiilite sur mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* Réduire légèrement sur les petits écrans */
+    }
+    .about-text h2 {
+        font-size: 1.6em; /* Réduire la taille du titre pour les petits écrans */
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .about-block, .interests-block, .skills-block {
+        flex: 1 1 auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+	.contact {
+        padding: 20px;
+        width: 90%;
+    }
+
+    form button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+	.about-block {
+        flex-direction: column; /* Empiler l'image et le texte sur les petits écrans */
+        text-align: center;
+    }
+
+    .about-image {
+        margin-bottom: 20px; /* Espacement supplémentaire sous l'image */
+    }
+
+    .about-text {
+        text-align: center; /* Centrer le texte sur les petits écrans */
+    }
+
+    .about-text h2 {
+        font-size: 1.8em; /* Réduire légèrement la taille du titre */
+    }
+
+    .about-text p {
+        font-size: 1em; /* Réduire la taille du texte pour les petits écrans */
+    }
+}
